@@ -1,18 +1,12 @@
 # Вывести последнюю букву в слове
 word = 'Архангельск'
-letters = []
-for letter in word:
-    letters += letter
-print(letters[-1])
+print(word[-1])
 
 
 # Вывести количество букв "а" в слове
 word = 'Архангельск'
 word = word.lower()
-letters = []
-for letter in word:
-    letters += letter
-collect = letters.count('а')
+collect = word.count('а')
 print(collect)
 
 # Вывести количество гласных букв в слове

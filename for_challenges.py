@@ -30,13 +30,12 @@ is_male = {
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 
-for key, value in is_male.items():
+for name in names:
 
-    if value == False:
-        print(f'{key}: женский')
-
-    if value == True:
-        print(f'{key}: мужской')
+    if is_male[name] == False:
+        print(f'{name}: женский')
+    else:
+        print(f'{name}: мужской')
 
 # Задание 4
 # Даны группу учеников. Нужно вывести количество групп и для каждой группы – количество учеников в ней
@@ -73,10 +72,12 @@ groups = [
 group_number = 1
 
 for group in groups:
-    stud_in_group = str()
+    list_stud_in_group = []
     
     for student in group:
-        stud_in_group = stud_in_group + ' ' + student
+        list_stud_in_group.append(student)
+
+    stud_in_group = ', '.join(list_stud_in_group)
 
     print(f'Группа {group_number}: {stud_in_group}')
     group_number += 1
