@@ -13,15 +13,15 @@ students = [
     {'first_name': 'Петя'},
 ]
 
-record_of_st = {}
+dict_of_st = {}
 
 for name in students:
-	if name['first_name'] in record_of_st:
-		record_of_st[name['first_name']] += 1
+	if name['first_name'] in dict_of_st:
+		dict_of_st[name['first_name']] += 1
 	else:
-		record_of_st[name['first_name']] = 1
+		dict_of_st[name['first_name']] = 1
 		
-print(record_of_st)
+print(dict_of_st)
 
 
 # Задание 2
