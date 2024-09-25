@@ -12,21 +12,17 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Петя'},
 ]
-list_of_st = []
+
 record_of_st = {}
-for student in students:
-    list_of_st.append(student['first_name'])
 
-list_of_name = set(list_of_st)
-
-for name in list_of_name:
-    record_of_st[name] = list_of_st.count(name)
-
+for name in students:
+	if name['first_name'] in record_of_st:
+		record_of_st[name['first_name']] += 1
+	else:
+		record_of_st[name['first_name']] = 1
+		
 print(record_of_st)
 
-#for name in list_of_name:
-#    collect = list_of_st.count(name)
-#    print(f'{name}: {collect}')
 
 # Задание 2
 # Дан список учеников, нужно вывести самое часто повторящееся имя
